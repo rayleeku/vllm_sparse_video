@@ -237,9 +237,9 @@ class InputPreprocessor:
                 and mm_items["video"].metadata is not None
             ):
                 for idx, meta_dd in enumerate(mm_items["video"].metadata):
-                    meta_dd["frames_indices"] = (
-                        mm_items["video"].data[idx][1]["frames_indices"]
-                        )
+                    meta_dd["frames_indices"] = mm_items["video"].data[idx][1][
+                        "frames_indices"
+                    ]
 
         mm_input = mm_processor.apply(
             prompt,
